@@ -9,7 +9,7 @@ const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-const entryFile = path.join(__dirname, 'src/main.js');
+const entryFile = path.join(__dirname, 'src/main.ts');
 const devServerPort = 8081;
 
 module.exports = {
@@ -17,14 +17,15 @@ module.exports = {
   mode: "development",
 
   resolve: {
-    extensions: ['.js', '.json', '.vue'],
+    extensions: [".js", ".json", ".vue", ".ts", ".tsx"],
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     alias: {
       'vue$': 'vue/dist/vue.common.js',
       'src': path.resolve(__dirname, 'src/'),
       'assets': path.resolve(__dirname, 'src/assets/'),
       'pages': path.resolve(__dirname, 'src/assets/vue/pages/'),
-      'components': path.resolve(__dirname, 'src/assets/vue/components/')
+      'components': path.resolve(__dirname, 'src/assets/vue/components/'),
+      '@': path.resolve('src/')
     }
   },
 
@@ -38,6 +39,13 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        }
+      },
       {
         test: /\.(png|jpe?g|gif)$/,
         loader: 'file-loader',

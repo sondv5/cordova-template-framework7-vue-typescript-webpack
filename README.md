@@ -19,19 +19,20 @@
 #
 -->
 
-![template logo](logo_v2.png "template logo")
+<!-- ![template logo](logo_v2.png "template logo") -->
 
-# Framework7 - Vue - Webpack Cordova Template
+# Framework7 - Vue - Typescript - Webpack Cordova Template
 You can start your new cordova project perfectly with this template.
 
 This template uses:
+* [Typescript]
 * [Framework7 3](https://framework7.io)
 * [Vue Js 2](https://vuejs.org/)
 * [Vuex](https://github.com/vuejs/vuex)
 * [Webpack 4](https://webpack.github.io/)
 * [Cordova](https://cordova.apache.org/)
-* [FontAwesome](http://fontawesome.io/)
 * [Babel Loader 7](https://github.com/babel/babel-loader)
+
 
 
 ## Minimum Requirements
@@ -65,33 +66,20 @@ Hooks are smart. They can fix some problems for you. Fix list:
 * `CordovaDeviceRouter.js` In live-reload mode, you can connect to server from multiple devices. This file inject right `cordova.js` file to page. So you can connect to webpack-dev-server from multiple devices at same time.
 
 ## Installation
-### IMPORTANT: Phonegap build tools not supported currently. I suggest to use cordova with this template.
-
-This template need cordova or phonegap, for more information [cordova installation](https://cordova.apache.org/docs/en/latest/guide/cli/) or [phonegap installation](http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/).
-
-Our Magic words:
-
 ``` bash
-cordova create <project_create_dir> [com.example.projectname] [ProjectClassName] --template cordova-template-framework7-vue-webpack
-phonegap create <project_create_dir> [com.example.projectname] [ProjectClassName] --template cordova-template-framework7-vue-webpack
+cordova create <project_create_dir> [com.example.projectname] [ProjectClassName] --template <template_path>
 ```
-
-boom! :boom: you have your brand new cordova / phonegap project with framework7 - vue 2 and webpack 4!
-
-![such a wow!](https://cloud.githubusercontent.com/assets/296796/3511506/4042665c-06b0-11e4-953c-4f14c11f81ec.png "such a wow!")
-
 ---
 
 ## Usage
 
-You can use every cordova | phonegap commands.
+You can use every cordova commands.
 You just have one more command option: `-- --lr`. It starts live reload.
 
 Example usage:
 ```
 cordova run android -- --lr
 cordova run browser -- --live-reload
-phonegap run ios -- --lr
 ```
 
 And :tada: that's all folks!

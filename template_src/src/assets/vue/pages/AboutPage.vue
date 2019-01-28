@@ -10,7 +10,10 @@
     </f7-block>
   </f7-page>
 </template>
-<script>
- export default {
-  };
+<script lang='ts'>
+import { Vue, Component } from "vue-property-decorator";
+@Component
+export default class AboutPage extends Vue {
+  
+}
 </script>

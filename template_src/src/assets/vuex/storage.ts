@@ -16,6 +16,7 @@ export default new Vuex.Store({
 
   mutations: {
     USER_LOGGED (state, user) {
+      debugger;
       state.user = user
     }
   },

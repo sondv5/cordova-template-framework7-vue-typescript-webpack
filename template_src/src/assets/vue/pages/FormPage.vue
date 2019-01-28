@@ -101,14 +101,12 @@
     </form>
   </f7-page>
 </template>
-<script>
+<script lang='ts'>
+  import {Vue, Component} from 'vue-property-decorator';
   import { f7Navbar, f7Page, f7BlockTitle } from 'framework7-vue';
 
-  export default {
-    components: {
-      f7Navbar,
-      f7Page,
-      f7BlockTitle,
-    },
+  @Component
+  export default class FromPage extends Vue {
+
   };
 </script>

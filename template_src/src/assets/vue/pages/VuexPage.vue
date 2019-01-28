@@ -13,22 +13,21 @@
 		</f7-list>
   </f7-page>
 </template>
-<script>
-	import { mapState, mapActions } from 'vuex'
+<script lang='ts'>
+	import {Vue, Component} from 'vue-property-decorator'; 	
 
-  export default {
-  	computed: {
-        ...mapState({
-            user: state => state.user
-        })
-    },
-		methods: {
-			loginAction: function() {
-				const self = this;
-				// Set new user into storage
-        self.userLogged({name: "User", id: "#1"});
-			},
-			...mapActions(['userLogged'])
+	@Component
+  export default class VuexPage extends Vue {
+		// Data
+		// user = this.$store.state.user;
+
+		get user() {
+			return this.$store.state.user;
 		}
+		
+		loginAction() {
+			this.$store.dispatch('userLogged', {name: 'User', id: '#1'});
+		}
+
   };
 </script>

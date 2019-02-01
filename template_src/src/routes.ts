@@ -1,9 +1,9 @@
-import MainPage from './assets/vue/pages/MainPage.vue';
-import AboutPage from './assets/vue/pages/AboutPage.vue';
-import DynamicRoutePage from './assets/vue/pages/DynamicRoutePage.vue';
-import FormPage from './assets/vue/pages/FormPage.vue';
-import VuexPage from './assets/vue/pages/VuexPage.vue';
-import ColorThemePage from './assets/vue/pages/ColorThemePage.vue';
+import MainPage from './pages/MainPage.vue';
+import AboutPage from './pages/AboutPage.vue';
+import DynamicRoutePage from './pages/DynamicRoutePage.vue';
+import FormPage from './pages/FormPage.vue';
+import VuexPage from './pages/VuexPage.vue';
+import ColorThemePage from './pages/ColorThemePage.vue';
 
 const routes: object = [
   {
